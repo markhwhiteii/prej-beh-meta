@@ -11,6 +11,6 @@ dat <- readr::read_csv("subtlety_ratings.csv") %>%
   spread(question, value)
 
 dat[40,1] <- "p4"
-dat[40,2] <- colSums(d1[which(d1$paradigm %in% c("p1","p2")),2:4])[[1]]/2
-dat[40,3] <- colSums(d1[which(d1$paradigm %in% c("p1","p2")),2:4])[[2]]/2
-dat[40,4] <- colSums(d1[which(d1$paradigm %in% c("p1","p2")),2:4])[[3]]/2
+dat[40,2] <- colSums(dat[which(dat$paradigm %in% c("p1","p2")),2:4])[[1]]/2
+dat[40,3] <- colSums(dat[which(dat$paradigm %in% c("p1","p2")),2:4])[[2]]/2
+dat[40,4] <- colSums(dat[which(dat$paradigm %in% c("p1","p2")),2:4])[[3]]/2
