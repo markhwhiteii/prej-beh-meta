@@ -1,7 +1,7 @@
 library(dplyr)
 library(tidyr)
 
-dat <- readr::read_csv("mturkcodingraw.csv") %>% 
+dat <- readr::read_csv("subtlety_ratings.csv") %>% 
   gather(key=measure, value=response, p1_1:p40_3, factor_key=TRUE, na.rm=TRUE) %>%
   group_by(measure) %>% 
   summarise(value=mean(response)) %>% 
